@@ -1,0 +1,17 @@
+<!--pages/details/details.wxml-->
+
+<view class='body' style='height:{{windowHeight}}px'>
+  <view class="details">
+          <image src="{{productItem.photo}}" class="slide-image" mode="aspectFill" />
+    <view class='cc'></view>
+    <view class='words'>
+      <view class='name'>{{productItem.name}}</view>
+      <view class='detail'>{{productItem.comment}}</view>
+      <view class='price'>￥{{productItem.price}}</view>
+      <button class='buys' data-productListItem="{{productItem.productListItem}}" data-cartListItem="{{item.cartListItem}}" bindtap='addcart'>
+        <image mode="{{aspectFit}}" src="{{'http://ws.thinkliving.com.cn/catering/resource/image/shopping.png'}}"></image>
+        <view class='buy'>加入购物车</view>
+      </button>
+    </view>
+  </view>
+</view>

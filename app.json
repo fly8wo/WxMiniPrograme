@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/menu/menu",
+    
+    
+    
+    "pages/homepage/homepage",
+   
+    "pages/payment/payment",
+    "pages/cart/cart",
+      "pages/remarks/remarks",
+  
+    "pages/logs/logs",
+    "pages/detail/detail"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#576b95",
+    "navigationBarTitleText": "餐饮",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

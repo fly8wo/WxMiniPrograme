@@ -1,0 +1,389 @@
+/*  头部  */
+.header {
+  width: 100%;
+  height: 66rpx;
+  background: #f0efef;
+  display: inline-flex;
+  justify-content: space-between;
+  /* position: fixed;
+  top: 0;
+  z-index: 9999; */
+}
+.table {
+  font-size: 24rpx;
+  color: #333;
+  line-height: 66rpx;
+  margin-left: 3%;
+}
+
+.my {
+  width: 6%;
+  height: 85%;
+  margin-right: 2%;
+  background: url('http://ws.thinkliving.com.cn/catering/resource/image/me.png') no-repeat;
+  background-size: 100% auto;
+  position: relative;
+  top: 15%;
+}
+/*菜品详情页面*/
+.detail_body{
+  width: 100%;
+  background: #000;
+  position: fixed;
+  top: 0;
+  z-index: 99999999;
+}
+.details{
+  width: 85%;
+  height: 75%;
+  position: fixed;
+  top: 100rpx;
+  left: 7%;
+  background: #FFF;
+}
+.banner{
+  width: 100%;
+  height: 55%;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.words{
+  width: 94%;
+  height: 50%;
+  margin: 0 0 0 3%;
+}
+.details_name{
+  font-size: 36rpx;
+  color: #161616;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.detail{
+  height: 30%;
+  font-size: 24rpx;
+  color: #999;
+  text-indent: 2em;
+  letter-spacing: 2rpx;
+  text-align: justify;
+}
+.price{
+  height: 90rpx;
+  font-size: 48rpx;
+  color: red;
+}
+.buys{
+  width: 220rpx;
+  height: 56rpx;
+  background: red;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 65%;
+}
+.buy{
+  font-size: 24rpx;
+  color: #fff;
+}
+.buys image{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 8rpx 0 0;
+}
+.delete{
+  width: 60rpx;
+  height: 60rpx;
+  position: fixed;
+  top: 9%;
+  right: 10%;
+}
+.clickback{
+  width: 220rpx;
+  height: 56rpx;
+  background: red;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 75%;
+  font-size: 36rpx;
+  color: #ffffff;
+}
+
+
+/* 中间 */
+
+.content {
+  width: 100%;
+  display: inline-flex;
+}
+
+/*  中间左边 */
+
+.left {
+  width: 20%;
+  height: auto;
+  background: #f0efef;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 106rpx;
+}
+
+.menulist {
+  width: 160rpx;
+  height: auto;
+  background: #e5e5e5;
+  position: fixed;
+  top: 86rpx;
+  left: 0;
+  z-index: 999999;
+  margin: 0 0 15% 0;
+}
+.page {
+  height: 110rpx;
+  font-size: 36rpx;
+  color: #333;
+  line-height: 96rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #ddd;
+}
+.page1{
+  background: #fff;
+}
+/*  中间右边 */
+
+.right {
+  width: 80%;
+  height: auto;
+}
+
+.menu {
+  width: 100%;
+  height: 200rpx;
+  display: inline-flex;
+  border-bottom: 10rpx solid #f0f0f0;
+}
+
+.quality {
+  width: 60rpx;
+  height: auto;
+  color: #161616;
+  font-size: 36rpx;
+  text-align: center;
+}
+
+.picture {
+  width: 50%;
+  height: 100%;
+}
+
+.picture image {
+  width: 240rpx;
+  height: 160rpx;
+  position: relative;
+  top: 10%;
+  left: 10%;
+}
+
+.infor {
+  width: 50%;
+  height: 100%;
+}
+
+.infor_cont {
+  width: 100%;
+  height: 80%;
+  position: relative;
+  top: 10%;
+}
+
+.name {
+  width: 100%;
+  height: 40%;
+  font-size: 36rpx;
+  color: #333;
+}
+
+.number {
+  width: 90%;
+  height: 30%;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.number image {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.money {
+  width: 100%;
+  height: 30%;
+  color: red;
+  font-size: 36rpx;
+}
+
+/*底部*/
+
+.shopping {
+  width: 100%;
+  height: 96rpx;
+  background: #000;
+  position: fixed;
+  bottom: 0;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.shoppings {
+  width: 100%;
+  height: 96rpx;
+  background: #000;
+  position: fixed;
+  bottom: 0;
+  z-index: 99999999999;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.cart {
+  width: 40%;
+  height: auto;
+  display: inline-flex;
+}
+
+.img {
+  width: 120rpx;
+  height: 120rpx;
+  background: #161616;
+  border-radius: 60rpx;
+  position: relative;
+  bottom: 50rpx;
+  left: 20rpx;
+  z-index: 9999;
+}
+
+.img image {
+  width: 80rpx;
+  height: 80rpx;
+  position: relative;
+  top: 20%;
+  left: 15%;
+}
+
+.color {
+  width: 35rpx;
+  height: 35rpx;
+  border-radius: 20rpx;
+  background: #ff0202;
+  color: #fff;
+  font-size: 24rpx;
+  line-height: 35rpx;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.settlement {
+  color: #ff0202;
+  font-size: 36rpx;
+  line-height: 96rpx;
+  margin-left: 10%;
+}
+
+.payment {
+  width: 220rpx;
+  background: #ff0202;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 96rpx;
+  text-align: center;
+}
+
+
+.cartwindows{
+  width: 100%;
+  position: fixed;
+  top: 0; 
+}
+.cart_header{
+  width: 100%;
+  height: 47%;
+  background: #000;
+  opacity: 0.7;
+}
+.cartwindow{
+  width: 100%;
+  height:50%;
+  background: #f9f9f9;
+}
+
+.cartwindow_top{
+  width: 100%;
+  height: 80rpx;
+  background: #f1f1f1;
+}
+.cartimg{
+  width: 40rpx;
+  height: 50%;
+  margin: 0 auto;
+}
+.cartimg image{
+  width: 40rpx;
+  height: 40rpx;
+  transform: rotate(-90deg);
+  
+}
+.emptycart{
+  font-size: 24rpx;
+  color: #999;
+  margin: 0 3% 0 80%;
+}
+.orderlist{
+  width: 100%;
+  height: 96rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.order{
+  width: 94%;
+  height: 100%;
+  margin: 0 0 0 3%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left_name{
+  font-size: 30rpx;
+  color: #333;
+}
+.right_price{
+  width: 40%;
+  height: auto;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 36rpx;
+  color: #333;
+}
+
+/*这是数量  */
+.cartnumber{
+  width: 70%;
+  height: auto;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.cartnumber image{
+  width: 45rpx;
+  height: 45rpx;
+}
+.addAnimation{
+  width: 10px;
+  height: 10px;
+  position: fixed;
+  background-color: red;
+  border-radius:15px 15px;
+   z-index: 999999999;
+}

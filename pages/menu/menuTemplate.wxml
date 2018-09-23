@@ -1,0 +1,75 @@
+<!--中间右边菜单模板  -->
+<template name='productListTemp'>
+  <view wx:for="{{productList}}" class='menu' id="{{item.productTypeName}}" wx:key="{{index}}">
+    <view class='picture'>
+      <image src="{{item.product_image_url}}" mode="{{item.mode}}" bindtap="jumpProductInfo" data-productlistitem='{{index}}'></image>
+    </view>
+    <view class='infor'>
+      <view class='infor_cont'>
+        <view class='name'>{{item.product_name}}</view>
+        <view class='number'>
+
+          <image data-productListItem="{{index}}" data-cartListItem="{{item.cartListItem}}" data-status="1" bindtap='imageCut' mode="{{item.mode}}" src="{{'http://ws.thinkliving.com.cn/catering/resource/image/reduce.png'}}" style='display:{{item.cutAndNumImage}}'></image>
+          <view class='quality' style='display:{{item.cutAndNumImage}}'>{{item.current_product_num}}</view>
+          <image data-productListItem='{{index}}' data-cartListItem="{{item.cartListItem}}" data-status="1" bindtap='imageAdd' mode="{{item.mode}}" src="{{'http://ws.thinkliving.com.cn/catering/resource/image/plus.png'}}"></image>
+
+
+        </view>
+        <view class='money'>￥{{item.product_price}}</view>
+      </view>
+    </view>
+  </view>
+</template>
+<!--中间左边菜单模板-->
+<template name="menulist">
+  <view wx:for="{{productTypeList}}" wx:key="{{index}}">
+    <view bindtap='clickProductType' data-productTypeId='{{index}}' 
+    class="page {{item.displayState ? 'page1':''}}">{{item.type_name}}</view>
+  </view>
+</template>
+<!-- 头部菜单模板-->
+<template name='header'>
+  <view class='table'>桌号：{{num}}</view>
+  <view class='my'></view>
+</template>
+
+
+
+<template name="cartwindow">
+  <view class='cartwindows' style='height:{{shoppingcartObject.windowHeight}}px;display:{{shoppingcartObject.bottonStatus}}'>
+    <view class='cart_header' bindtap='clickCartblank'></view>
+    <view class='cartwindow'>
+      <view class='cartwindow_top'>
+        <view class='cartimg'>
+          <image mode="{{aspectFit}}" bindtap='clickCart' src="{{'http://ws.thinkliving.com.cn/catering/resource/image/arrow.png'}}"></image>
+        </view>
+        <view class='emptycart' bindtap='emptyShoppingcart'>
+          清空购物车
+        </view>
+      </view>
+      <!--这是购物车列表  -->
+      <scroll-view style='height:200px;' scroll-y='true'>
+        <view class='orderlist' wx:for="{{shoppingcartObject.cartObject}}" wx:key="{{index}}">
+          <view class='order'>
+            <view class='left_name'>{{item.product_name}}</view>
+            <view class='right_price'>
+              <view>￥{{item.product_price}}</view>
+              <view class='cartnumber'>
+
+                <image data-productListItem="{{item.productListItem}}" data-cartListItem="{{index}}" data-status="0" bindtap='imageCut' mode="{{item.mode}}" src="{{'http://ws.thinkliving.com.cn/catering/resource/image/reduce.png'}}" style='display:{{item.cutAndNumImage}}'></image>
+                <view class='quality' style='display:{{item.cutAndNumImage}}'>{{item.current_product_num}}</view>
+                <image data-productListItem="{{item.productListItem}}" data-cartListItem='{{index}}' data-status="0" bindtap='imageAdd' mode="{{item.mode}}" src="{{'http://ws.thinkliving.com.cn/catering/resource/image/plus.png'}}"></image>
+
+
+
+              </view>
+            </view>
+          </view>
+
+        </view>
+
+      </scroll-view>
+
+    </view>
+  </view>
+</template>

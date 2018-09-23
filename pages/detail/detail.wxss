@@ -1,0 +1,68 @@
+.body{
+  width: 100%;
+}
+.details{
+  width: 100%;
+  height: 1000rpx;
+  background: #fff;
+}
+.image{
+  width: 100%;
+  height: 50%;
+}
+.slide-image{
+  width: 100%;
+  height: 500rpx;
+}
+.words{
+  width: 94%;
+  height: 45%;
+  margin: 5% 0 0 3%;
+}
+.name{
+  height: 20%;
+  font-size: 36rpx;
+  color: #161616;
+}
+.detail{
+  height: 40%;
+  font-size: 24rpx;
+  color: #999;
+  text-indent: 2em;
+  letter-spacing: 2rpx;
+  text-align: justify;
+}
+.price{
+  height: 20%;
+  font-size: 48rpx;
+  color: red;
+}
+.buys{
+  width: 220rpx;
+  height: 56rpx;
+  background: red;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 75%;
+}
+.buy{
+  font-size: 24rpx;
+  color: #fff;
+}
+.buys image{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 8rpx 0 0;
+}
+.clickback{
+  width: 220rpx;
+  height: 56rpx;
+  background: red;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 75%;
+  font-size: 36rpx;
+  color: #ffffff;
+}

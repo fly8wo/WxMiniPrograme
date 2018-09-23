@@ -1,0 +1,125 @@
+/* pages/homepage/homepage.wxss */
+page{
+  background: #fff;
+}
+.banner{
+  width:1000rpx;
+  height: 450rpx;
+  border-radius: 0 0 50%  50%;
+  position: fixed;
+  left: -20%;
+}
+.slide-image{
+  width:160%;
+  height: 450rpx;
+  border-radius: 0 0 50%  50%;
+  position: fixed;
+  left: -30%;
+}
+.stornames{
+  width: 250rpx;
+  height: 250rpx;
+  background: #fff;
+  border-radius: 200rpx;
+  box-shadow: 0 0 0 20rpx rgba(255,255,255,.5);
+  position: fixed;
+  top: 25%;
+  left: 33%;
+  z-index: 99;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.storname{
+  width: 100%;
+  height: 80rpx;
+  display: inline-flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 40rpx 0 0 0;
+}
+.english{
+  font-size: 24rpx;
+  color: red;
+  margin: -60rpx 0 0 0;
+}
+.first{
+  color: red;
+  font-size: 30rpx;
+}
+.second{
+  color: red;
+  font-size: 72rpx;
+}
+.third{
+  color: red;
+  font-size: 30rpx;
+}
+.box{
+  width: 100%;
+  height: 510rpx;
+}
+.stor{
+  position: relative;
+  z-index: 999999;
+}
+.address{
+  color: #333;
+  font-size: 24rpx;
+  text-align: center;
+}
+.time{
+  color: #333;
+  font-size: 18rpx;
+  text-align: center;
+}
+.operation{
+  width: 97%;
+  height: auto;
+  margin: 6% 0 0 3%;
+  display: inline-flex;
+  flex-flow: row wrap;
+}
+.menu{
+  width: 340rpx;
+  background: #f6345e;
+  height: 150rpx;
+  font-size: 36rpx;
+  color: #fff;
+  text-align: center;
+  margin: 0 3% 3% 0;
+}
+.word{
+  margin: 30rpx 0 0 0;
+}
+.special{
+  color: #fdd102;
+}
+.specials{
+  width: 10rpx;
+  height: 110rpx;
+  background: #fdd102;
+  position: fixed;
+  display: none;
+}
+.order{
+  background: #94b710;
+}
+.info{
+  background: #34592a;
+}
+.takeout{
+ background: #e21415;
+}
+.company{
+  font-size: 14rpx;
+  color: #999;
+  text-align: center;
+  margin: 20% 0 0 0;
+}
+.website{
+  font-size: 14rpx;
+  color: #999;
+  text-align: center;
+}

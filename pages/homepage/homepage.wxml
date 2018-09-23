@@ -1,0 +1,46 @@
+<!--pages/homepage/homepage.wxml-->
+<swiper class='banner' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+       <image src="{{item}}" class="slide-image" mode="aspectFill"/> 
+    </swiper-item>
+  </block>
+</swiper>
+<view class='stornames'>
+  <view class='storname'>
+    <text class='first'>美</text>
+    <text class='second'>食</text>
+    <text class='third'>每刻</text>
+  </view>
+  <view class='english'>Meishi Meike</view> 
+</view>
+<view class='box'></view>
+<view class='stor'>
+  <view class='address'>雁塔区电子正街店</view>
+  <view class='time'>营业时间：9:30-23:00</view>
+</view>
+<view class='operation'>
+  <view class='menu' bindtap='clickmenu'>
+    <view class='specials' style='display:{{menu}}'></view>
+    <view class="word {{menuspecial}}" >点菜</view>
+    <view class="{{menuspecial}}">Menu</view>
+  </view>
+  <view class='menu order' bindtap='clickorder'>
+    <view class='specials'style='display:{{order}}'></view>
+    <view class="word {{orderspecial}}">订单</view>
+    <view class="{{orderspecial}}">Order</view>
+  </view>
+  <view class='menu info' bindtap='clickinfo'>
+    <view class='specials' style='display:{{info}}'></view>
+    <view class="word {{infospecial}}" >信息</view>
+    <view class="{{infospecial}}" >Info</view>
+  </view>
+  <view class=' menu takeout' bindtap='clicktakeout'>
+    <view class='specials' style='display:{{takeout}}'></view>
+    <view class="word {{takeoutspecial}}">外卖</view>
+    <view class="{{takeoutspecial}}">Take-out</view>
+  </view>
+</view>
+<view class='company'>西安思科力威网络科技有限公司</view>
+<view class='website'>http://www.thinkliving.com.cn/</view>

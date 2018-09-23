@@ -1,0 +1,72 @@
+<!--这是导入的头部  -->
+<view class="header">
+  <view class='table'>桌号：{{tableObject.table_name}}</view>
+  <view class='my'></view>
+</view>
+<!-- 这是动画 -->
+<!-- <view animation="{{addAnimationData0}}" class='addAnimation' style='left:{{addAnimationLeft}}px;top:{{addAnimationTop}}px;'></view> -->
+<view animation="{{addAnimationData}}" class='addAnimation' style='left:{{addAnimationLeft}}px;top:{{addAnimationTop}}px;'></view>
+<!-- <view animation="{{addAnimationData1}}" class='addAnimation' style='left:{{addAnimationLeft}}px;top:{{addAnimationTop}}px;'></view> -->
+<!-- 设置2个动画调用 -->
+
+<!--这里是菜品详情页面-->
+<view class='detail_body' style='height:{{detailHeight}}px;display:{{cover}}'>
+  <view class="details" >
+  <swiper class='banner' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{productItem.product_image_url}}" class="slide-image" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='words'>
+    <view class='details_name'>{{productItem.product_name}}</view>
+    <view class='detail'>{{productItem.product_comment}}</view>
+    <view class='price'>￥{{productItem.product_price}}</view>
+    <button class='buys' data-productListItem="{{productItem.productListItem}}" data-cartListItem="{{productItem.cartListItem}}" bindtap='imageAdd'>
+      <image mode="{{aspectFit}}" src="{{'http://ws.thinkliving.com.cn/catering/resource/image/shopping.png'}}"></image>
+      <view class='buy'>加入购物车</view>
+    </button>
+  </view>
+  <image class='delete' bindtap='closedetail' mode="{{aspectFit}}" src="{{'http://ws.thinkliving.com.cn/catering/resource/image/delete.png'}}"></image>
+</view>
+</view>
+
+
+<!--这是身体  -->
+<view class='content' style="height:{{windowHeight}}px">
+  <!--这是导入的左边菜单  -->
+  <scroll-view class="left" style="height:{{windowHeight}}px" scroll-y='true'>
+    <import src="menuTemplate.wxml" />
+    <template is="menulist" data="{{productTypeList}}" />
+  </scroll-view>
+  <!--这是导入的右边菜品  -->
+  <scroll-view class="right" style="height:{{windowHeight}}px" scroll-y='true' scroll-into-view="{{productTypeName}}" scroll-with-animation="{{true}}">
+    <import src="menuTemplate.wxml" />
+    <!--<view wx:for="{{productList}}" wx:key="{{index}}" class='menu'>
+      <template is="productListTemp" data="{{...item}}"></template>
+    </view> -->
+
+    <template is="productListTemp" data="{{productList}}"></template>
+  </scroll-view>
+
+</view>
+
+<view></view>
+
+
+<!--这是导入底部购物车  -->
+<view class="shopping">
+  <import src="menuTemplate.wxml" />
+  <template is="cartwindow" data="{{shoppingcartObject}}" />
+  <view class="shoppings">
+    <view class='cart'>
+      <view class='img'>
+        <image mode="{{aspectFit}}" data-status='{{shoppingcartObject.isExpandCart}}' bindtap='clickCart' src="{{'http://ws.thinkliving.com.cn/catering/resource/image/shopping.png'}}"></image>
+        <view class='color' bindtap='ssssssssssss'>{{shoppingcartObject.product_num}}</view>
+      </view>
+      <view class='settlement'>￥{{shoppingcartObject.total_price}}</view>
+    </view>
+    <view class='payment' bindtap='clickPaymentButton'>确认订单</view>
+  </view>
+</view>

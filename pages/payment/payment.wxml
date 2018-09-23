@@ -1,0 +1,64 @@
+<!--pages/payment/payment.wxml-->
+<view class='body' style='height:{{windowHeight}}px'>
+  <view class='main'>
+    <!--这是第一栏 -->
+    <view class='first'>
+      <!--用餐人数  -->
+      <view class='column'>
+        <view class='inform'>
+          <view class='repastNum'>用餐人数：</view>
+        </view>
+        <view class='arrow' bindtap="modify">
+        <view wx:if = "{{repastnum == ''}}">{{nobody}}</view>
+        <view wx:else>
+          <view style="color:#000">{{repastnum}}</view>
+        </view>
+          <image mode="{{aspectFit}}" src="{{'http://ws.thinkliving.com.cn/catering/resource/image/arrow.png'}}"></image>
+        </view>
+      </view>
+      <!--备注  -->
+      <view class='column'>
+      <view class='inform'>
+      <text class='remarks'>备注：{{comment}}</text>
+      </view>
+      <navigator url="/pages/remarks/remarks?title=comment" class="arrow">口味，偏好等要求
+      <image mode="{{aspectFit}}" src="{{'http://ws.thinkliving.com.cn/catering/resource/image/arrow.png'}}"></image>
+      </navigator>
+      </view>
+      </view>
+
+    <!--这是第二栏 -->
+
+    <scroll-view class='second' scroll-y style='height:900rpx'>
+        <view class='list'>
+        <view class='storename'>
+        <image mode="{{aspectFit}}" src="{{'http://ws.thinkliving.com.cn/catering/resource/image/index.png'}}"></image>
+        源正鲜</view>
+        <view wx:for="{{shoppingcartObject.cartObject}}" wx:key="{{item.id}}" class='columns'>
+        <view class='menu'>
+        <view class='food_pic'>
+        <image mode="{{aspectFit}}" src="{{item.product_image_url}}"></image>
+        </view>
+        <view class='infor'>
+        <view class='dishes'>{{item.product_name}}</view>
+        <view class='number'>数量：{{item.current_product_num}}</view>
+        </view>
+        </view>
+        <view class='arrows'>￥{{item.product_price}}</view>
+        </view>
+        </view>
+    </scroll-view>
+  </view>
+
+  <view></view>
+  <!--这是底部购物车  -->
+  <view class='shopping'>
+
+    <view>
+      <view class="total">合计：{{shoppingcartObject.total_price}}</view>
+
+      <button class="button-red" bindtap="immeBuy" formType="submit">{{item}}</button>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/index/index.wxml-->
+<view class='body' style='height:{{windowHeight}}px'>
+<!--这是导入的导航  -->
+<view class="header">
+  <import src="../menu/template/template.wxml" />
+  <template is="header" data="{{table_name}}"/>
+</view>
+
+ <!--这是轮播图  -->
+<swiper class='banner' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" mode="aspectFill"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='content'>
+  <button class='number' bindtap='scanning' style='background:{{bgtable}};'>输入桌号</button>
+  <button class='star' open-type="getUserInfo" style='background:{{bgstar}};' bindgetuserinfo='starmenu'>开始点餐</button>
+</view>
+</view>
+

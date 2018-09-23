@@ -1,0 +1,16 @@
+
+<!--pages/fenlei/fl.wxml-->
+<view class="title">请添加备注</view>  
+<!--options-->  
+<view class='textput'>
+  <textarea bindblur="remarksInput" maxlength="-1" placeholder="口味、偏好等要求" bindinput = "textbox" value="{{userInputRemarks}}" auto-focus="true"></textarea>
+</view>
+<!--button-->  
+<view class="weui-btn-area">  
+  <button class="comment" type="primary" bindtap="submit">确定</button>  
+</view>
+<view class='remarks'>
+<!-- <view > -->
+  <button bindtap='userHistoryInfoButton' wx:for="{{userHistoryInfoList}}" data-index='{{index}}'>{{item.history_info}}</button>
+</view>
+
